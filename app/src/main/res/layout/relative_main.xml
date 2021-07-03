@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_titulo"
         style="@style/title_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="IMC"
+        android:layout_marginTop="48dp"
         android:textSize="48sp" />
 
     <EditText
         android:id="@+id/et_peso"
+        style="@style/input_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Insira seu peso em Kg (80.5)"
-        style="@style/input_style" />
+        android:layout_below="@+id/tv_titulo"
+        android:layout_centerInParent="true"
+        android:hint="Insira seu peso em Kg (80.5)" />
 
     <EditText
         android:id="@+id/et_altura"
         style="@style/input_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Insira sua altura em cm (Ex: 1.77)"/>
+        android:layout_below="@+id/et_peso"
+        android:hint="Insira sua altura em cm (Ex: 1.77)" />
 
     <Button
         android:id="@+id/bt_calculo"
-        android:layout_marginTop="46dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
         android:backgroundTint="@android:color/holo_green_light"
+        android:padding="16dp"
         android:text="Calcular"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textSize="16sp" />
 
-</LinearLayout>
+
+</RelativeLayout>
